@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="755905f2-6790-40eb-974c-c3f2012616cf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wmp/core/WorkerInitializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WMP/com/wmp/Main.class" afterPath="$PROJECT_DIR$/out/production/WMP/com/wmp/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WMP/com/wmp/core/WorkerThread.class" afterPath="$PROJECT_DIR$/out/production/WMP/com/wmp/core/WorkerThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WMP/com/wmp/core/WorkerThreadManager.class" afterPath="$PROJECT_DIR$/out/production/WMP/com/wmp/core/WorkerThreadManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WMP/com/wmp/services/logs/Logger.class" afterPath="$PROJECT_DIR$/out/production/WMP/com/wmp/services/logs/Logger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WMP/com/wmp/services/logs/LogsLevels.class" afterPath="$PROJECT_DIR$/out/production/WMP/com/wmp/services/logs/LogsLevels.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wmp/Main.java" afterPath="$PROJECT_DIR$/src/com/wmp/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wmp/core/WorkerThread.java" afterPath="$PROJECT_DIR$/src/com/wmp/core/WorkerThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wmp/core/WorkerThreadManager.java" afterPath="$PROJECT_DIR$/src/com/wmp/core/WorkerThreadManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/wmp/services/logs/LogsLevels.java" afterPath="$PROJECT_DIR$/src/com/wmp/services/logs/LogsLevels.java" />
     </list>
     <ignored path="WMP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +87,7 @@
       <file leaf-file-name="WorkerInitializer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wmp/core/WorkerInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63432837">
+            <state vertical-scroll-proportion="6.071429">
               <caret line="15" column="24" selection-start-line="14" selection-start-column="16" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -631,7 +621,13 @@
       <option name="project" value="LOCAL" />
       <updated>1485145124821</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Description: &#10;- worker Initializer main workerThread which starts the program&#10;- worker Initialize runs depending on some conditions&#10;- wokerManager contains the state of runing and in hold threads">
+      <created>1485320936371</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1485320936371</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -644,7 +640,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2785235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.88255036" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -675,7 +671,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Description: &#10;-generic logs service contains  loglevels Info, warning and error.&#10;-workerThread will extended by all the classes which will be working&#10;-workerThreadManager will be managing the workerThreads depending on priorities, available ressources and time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Description: &#10;-generic logs service contains  loglevels Info, warning and error.&#10;-workerThread will extended by all the classes which will be working&#10;-workerThreadManager will be managing the workerThreads depending on priorities, available ressources and time" />
+    <MESSAGE value="Description: &#10;- worker Initializer main workerThread which starts the program&#10;- worker Initialize runs depending on some conditions&#10;- wokerManager contains the state of runing and in hold threads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Description: &#10;- worker Initializer main workerThread which starts the program&#10;- worker Initialize runs depending on some conditions&#10;- wokerManager contains the state of runing and in hold threads" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -894,7 +891,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wmp/core/WorkerInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63432837">
+        <state vertical-scroll-proportion="6.071429">
           <caret line="15" column="24" selection-start-line="14" selection-start-column="16" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
