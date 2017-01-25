@@ -12,7 +12,8 @@ public class WorkerThread extends Thread
 
   public WorkerThread(Integer aInThreadId)
   {
-    super();
+    threadId = aInThreadId;
+    new Thread();
   }
 
 

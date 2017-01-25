@@ -11,7 +11,7 @@ public abstract class LogsLevels
   protected final static String LOG_WARNING_TAG = "[LogWarning]";
   protected final static String LOG_TEST_FAILED_TAG = "[TEST FAILED]";
   protected final static String LOG_TEST_SUCCEEDED_TAG = "[TEST SUCCEEDED]";
-  protected final static String GENERIC_ERROR_MSG = "An Unknown Error Occured";
+  protected final static String GENERIC_ERROR_MSG = "An Unknown Error Occurred";
   public LogsLevels()
   {}
 }
