@@ -1,4 +1,4 @@
-package com.wmp.core;
+package com.wmp.core.threadManagement;
 
 /**
  * PackageName com.wmp.core
@@ -9,6 +9,7 @@ public class WorkerThread extends Thread
 {
   protected Integer threadId;
   protected String description;
+  protected volatile boolean isRunning = false;
 
   public WorkerThread(Integer aInThreadId)
   {
@@ -16,5 +17,17 @@ public class WorkerThread extends Thread
     new Thread();
   }
 
+  public Integer getThreadId()
+  {
+    return threadId;
+  }
+  public boolean isWorkerThreadIdEqual(Integer aInthreadId)
+  {
+    return aInthreadId==threadId;
+  }
+  @Override
+  public void run()
+  {
+  }
 
 }

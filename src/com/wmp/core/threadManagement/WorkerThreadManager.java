@@ -1,7 +1,6 @@
-package com.wmp.core;
+package com.wmp.core.threadManagement;
 
 import java.util.ArrayDeque;
-import java.util.HashMap;
 import java.util.Queue;
 
 /**
@@ -15,19 +14,19 @@ import java.util.Queue;
  */
 public class WorkerThreadManager
 {
-  final static Integer CPACITY= 20;
+  final static Integer CAPACITY= 20;
   private static WorkerThreadManager instance = null;
-  private HashMap<Integer,WorkerThread> workerThreadHashMap;
-  private WorkerInitializer workerInitializer;
-  private Queue<WorkerThread> threadsInHold;
 
+  private Queue<WorkerThread> workerThreadQueue;
+  private Queue<WorkerThread> threadsInHold;
+  private WorkerInitializer workerInitializer;
 
   //mainThreadWorker will be referenced with id = "0"
   private WorkerThreadManager()
   {
-    workerThreadHashMap = new HashMap<>();
+    workerThreadQueue = new ArrayDeque<>();
     threadsInHold = new ArrayDeque<WorkerThread>();
-    workerThreadHashMap.put(0,workerInitializer.getInstance());
+    workerThreadQueue.add(workerInitializer.getInstance());
 
   }
 
@@ -42,19 +41,19 @@ public class WorkerThreadManager
       return instance;
   }
 
-  public HashMap<Integer, WorkerThread> getWorkerThreadHashMap()
+  public Queue<WorkerThread> getWorkerThreadQueue()
   {
-    return workerThreadHashMap;
+    return workerThreadQueue;
   }
 
-  public void setWorkerThreadHashMap(HashMap<Integer, WorkerThread> workerThreadHashMap)
+  public void setWorkerThreadHashMap(Queue<WorkerThread> aInworkerThreadQueue)
   {
-    this.workerThreadHashMap = workerThreadHashMap;
+    this.workerThreadQueue = aInworkerThreadQueue;
   }
 
-  public boolean isThreadWorking()
+  public boolean isAnyThreadWorking()
   {
-    return workerThreadHashMap.size()>1;
+    return workerThreadQueue.size()>1;
 
   }
 
@@ -67,10 +66,11 @@ public class WorkerThreadManager
   {
     this.threadsInHold = threadsInHold;
   }
-  public boolean areThreadsInHold()
+  public boolean isAnyThreadOnHold()
   {
     return threadsInHold.size()>0;
   }
+
 
 
 }

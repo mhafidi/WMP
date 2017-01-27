@@ -1,4 +1,4 @@
-package com.wmp.core;
+package com.wmp.core.threadManagement;
 
 import com.wmp.services.logs.Logger;
 
@@ -21,8 +21,7 @@ public class WorkerInitializer extends WorkerThread
 
 
   private static WorkerInitializer  workerInitializer = null;
-  private volatile long TotalUsedMemory = 0;
-  private volatile boolean isRunning = false;
+  private volatile long totalUsedMemory = 0;
   private volatile long limitTimeToStop = 0;
 
   private WorkerInitializer(Integer aInThreadId)
@@ -49,6 +48,10 @@ public class WorkerInitializer extends WorkerThread
     isRunning = running;
   }
 
+  public synchronized long getTotalUsedMemory()
+  {
+    return totalUsedMemory;
+  }
 
 
 
@@ -64,18 +67,18 @@ public class WorkerInitializer extends WorkerThread
       try
       {
         Thread.sleep(15000);
-        TotalUsedMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
-        Logger.getInstance().logInfo(CLASS_NAME,"Used Memory is= "+TotalUsedMemory,System.out);
+        totalUsedMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        Logger.getInstance().logInfo(CLASS_NAME,"Used Memory is= "+totalUsedMemory,System.out);
         limitTimeToStop++;
-        if(limitTimeToStop>=2 && !WorkerThreadManager.getInstance().isThreadWorking())
+        if(limitTimeToStop>=2 && !WorkerThreadManager.getInstance().isAnyThreadWorking())
         {
           isRunning = false;
         }
-        else if(WorkerThreadManager.getInstance().isThreadWorking())
+        else if(WorkerThreadManager.getInstance().isAnyThreadWorking())
         {
           limitTimeToStop--;
         }
-        else if(WorkerThreadManager.getInstance().areThreadsInHold())
+        else if(WorkerThreadManager.getInstance().isAnyThreadOnHold())
         {
 
           limitTimeToStop --;
